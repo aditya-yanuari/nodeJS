@@ -1,2 +1,0 @@
-# nodeJS
-CRUD nodeJS
