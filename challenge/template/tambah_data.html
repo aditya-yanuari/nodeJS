@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h2>Tambah Data</h2>
+
+<form method="POST">
+
+<table width="400px">
+	<tr>
+		<td><label>Nama Product</label></td>
+		<td><input type="text" name="nama_product"></td>
+	</tr>
+	<tr>
+		<td><label>Harga</label></td>
+		<td><input type="text" name="harga"></td>
+	</tr>
+	<tr>
+		<td><label>Kategori</label></td>
+		<td><input type="text" name="Kategori"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" value="Simpan"></td>
+	</tr>
+</table>
+
+</form>
+
+
+{% endblock %}

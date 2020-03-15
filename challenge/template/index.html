@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %} Data Product {% endblock %}
+
+{% block content %}
+	<h2>{{title}}</h2>
+
+	<table border="1" style="width: 400px; border-collapse: collapse;">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nama Product</th>
+				<th>Harga</th>
+				<th>Kategori</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+				{% for d in data %}
+			<tr>
+				<td>{{d.id}}</td>
+				<td>{{d.nama_product}}</td>
+				<td>{{d.harga}}</td>
+				<td>{{d.kategori}}</td>
+				<td>
+				<a href="/update/{{d.id}}">Update</a> /
+				<a href="/delete/{{d.id}}" onclick="return confirm('kamu yakin mau hapus aku???')">Delete</a>
+				</td>
+			</tr>
+
+		{% endfor %}
+		</tbody>
+	</table>
+	<br/>
+	<a href="/insert">Tambah Data</a>
+
+	{% endblock %}
